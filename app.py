@@ -14,7 +14,7 @@ def exemplo_feixe_local_tsp():
 
     print("\nMelhor rota encontrada:", melhor_rota)
     print("Melhor distância:", melhor_distancia)
-
+    pass
 
 # Função de exemplo para o TSP usando algoritmo genético
 def exemplo_algoritmo_genetico_tsp():
@@ -28,8 +28,22 @@ def exemplo_algoritmo_genetico_tsp():
 
     print("\nMelhor rota encontrada:", melhor_rota)
     print("Melhor distância:", melhor_distancia)
+    pass
 
+# Função para exibir o menu e obter a escolha do usuário
+def exibir_menu():
+    print("Escolha uma opção:")
+    print("1. Busca em Feixe Local para o TSP")
+    print("2. Algoritmo Genético para o TSP")
+    opcao = input("Digite o número da opção desejada: ")
+    return opcao
 
 if __name__ == "__main__":
-    #exemplo_feixe_local_tsp()
-    exemplo_algoritmo_genetico_tsp()
+    while True:
+        opcao = exibir_menu()
+        if opcao == "1":
+            exemplo_feixe_local_tsp()
+        elif opcao == "2":
+            exemplo_algoritmo_genetico_tsp()
+        else:
+            print("Opção inválida. Digite 1 ou 2 para escolher uma opção.")
